@@ -1,4 +1,5 @@
-
+let string = " ";
+let button = document.querySelectorAll('.button')
 function insert(num){
   }
   
