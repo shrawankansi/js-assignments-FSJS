@@ -19,20 +19,52 @@ const faqData = [
 ];
 
 
-// const  accordian_body;                    //accordianBody
+                  
+const accordianBody = document.querySelector(".accordian_body");
 
-console.log(faqs)
+function createFaq(questionTxt, answerTxt) {
+	let mainDiv = document.createElement("div");
+	let headerDiv = document.createElement("div");
+	let question = document.createElement("h3");
+	let answer = document.createElement("p");
+	let btn = document.createElement("button");
+	mainDiv.setAttribute("class", "faq");
+	headerDiv.setAttribute("class", "faq_header");
+	answer.setAttribute("class", "hidden");
+	btn.setAttribute("class", "show_btn");
+	btn.textContent = "+";
+	accordianBody.appendChild(mainDiv);
+	mainDiv.appendChild(headerDiv);
+	headerDiv.appendChild(question);
+	mainDiv.appendChild(answer);
+	headerDiv.appendChild(btn);
+
+	question.textContent = questionTxt;
+	answer.textContent = answerTxt;
+
+	// button click event
+	btn.addEventListener("click", btnStatusUpdate);
+	function btnStatusUpdate() {
+		btn.classList.toggle("rotate");
+
+		// ==== Optimized Logic =====
+		setTimeout(() => {
+			answer.classList.toggle("hidden", !answer.classList.contains("hidden"));
+		}, 300);
+		answer.classList.toggle("opacityIn", !answer.classList.contains("hidden"));
+		answer.classList.toggle("opacityOut", answer.classList.contains("hidden"));
+	}
+
+
+}
+
 
 function showFaq() {
-  
+	for (let i = 0; i < faqData.length; i++) {
+		createFaq(faqData[i].question, faqData[i].answer);
+	}
 }
+showFaq();
 
-function createFaq() {
-  
-}
-
-function btnStatusUpdate() {
-  
-}
 
 
