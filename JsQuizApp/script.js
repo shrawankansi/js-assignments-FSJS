@@ -33,22 +33,21 @@ const quizData = [
     },
 ];
 
-const quiz;
-const answerEls;
-const questionEl;
-const a_text;
-const b_text;
-const c_text;
-const d_text;
-const submitBtn;
+const quiz='';
+const answerEls = correct;
+const questionEl= question;
+const a_text=a;
+const b_text=b;
+const c_text=c;
+const d_text=d;
+const submitBtn =btn;
 
 let currentQuiz = 0
 let score = 0
 
 loadQuiz()
+{
 
-function loadQuiz() {
-    
 }
 
 function deselectAnswers() {
