@@ -61,10 +61,19 @@ h1 {
 
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: cente */
   margin-top: 2rem;
+  background-color: rgb(224, 142, 26);
+  height: 70vh;
+}
+span{
+  color: #fff;
+  font-size: large;
+  margin-left: -95px;
+  width: 50px;
+  height: 50px;
 }
 
 .item {
@@ -78,7 +87,7 @@ h1 {
   outline: none;
   color: rgb(255, 255, 255);
   border: none;
-  width: 350px;
+  width: 50px;
   font-size: 1.4rem;
 }
 
@@ -102,4 +111,21 @@ h1 {
   color: rgb(223, 16, 16);
   border: none;
   cursor: pointer;
+}
+.task{
+  
+  background-color: #1f5079;
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete{
+  height: 30px;
+  background-color: rgb(201, 87, 93);
+  border-color: rgb(201, 87, 93);
+  width: 50px;
 }
